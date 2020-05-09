@@ -22,7 +22,7 @@
   <body>
     <form class="form-signin">
       <div class="text-center mb-4">
-        <img class="mb-4" src="logo2.png" alt="" width="150" height="150">
+        <img class="mb-4" src="logo.png" alt="" width="150" height="150">
         <h1 class="h3 mb-3" style="font-family: Helvetica, Arial, Sans-Serif; font-weight: 600; color: #394E70;">Vagas de Emprego</h1>
         <p style="font-family: Helvetica, Arial, Sans-Serif; font-weight: 500; color: #394E70;">Insira seu usuário e senha para acessar o sistema.</p>
       </div>

@@ -7,7 +7,7 @@
     $resultado = $con->query($sql);
     if($resultado==true){
       //echo "Registro removido com sucesso";
-      header('Location: lista_vagas.php');
+      header('Location: inicio.php');
     }else{
       echo "Erro ao tentar remover o registro: " . $id;
     }

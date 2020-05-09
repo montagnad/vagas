@@ -43,7 +43,7 @@
 
     <!-- Begin page content -->
 
-    <?php require_once('lista_vagas.php') ?>
+    <?php require_once('form_vagas.php') ?>
 
     <footer class="footer">
       <div class="container">

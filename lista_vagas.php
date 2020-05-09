@@ -20,10 +20,9 @@
   <body>
     <div class="container">
       <h1>Vagas de emprego</h1>
-      <a class="btn btn-info" href="form_vagas.php">Nova vaga</a>
+
       <table class="table table-striped table-bordered table-hover">
         <thead>
-          <th>#</th>
           <th>Vaga</th>
           <th>Setor</th>
           <th>Requisitos</th>
@@ -32,7 +31,6 @@
         <tbody>
         <?php foreach($lista as $linha): ?>
             <tr>
-              <td><?= $linha['id']; ?></td>
               <td><?= $linha['nomeVaga']; ?></td>
               <td><?= $linha['nomeSetor']; ?></td>
               <td><?= $linha['requisitos']; ?></td>

@@ -8,5 +8,5 @@
     $query = $con->query($sql);
     $registro = $query->fetch();
 
-    require ('form_vagas.php');
+    require ('cadastro.php');
  ?>
