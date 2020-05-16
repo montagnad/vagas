@@ -18,20 +18,22 @@
     <div class="container">
       <h2>Vagas de emprego</h2>
 
-      <table class="table table-striped table-bordered table-hover">
+      <table class="table table-striped table-bordered table-hover table-responsive">
         <thead>
-          <th>Vaga</th>
-          <th>Setor</th>
-          <th>Requisitos</th>
-          <th>Ações</th>
+          <tr>
+            <th scope="col">Vaga</th>
+            <th scope="col">Setor</th>
+            <th scope="col">Requisitos</th>
+            <th scope="col">Ações</th>
+          </tr>
         </thead>
         <tbody>
         <?php foreach($lista as $linha): ?>
             <tr>
-              <td><?= $linha['nomeVaga']; ?></td>
-              <td><?= $linha['nomeSetor']; ?></td>
-              <td><?= $linha['requisitos']; ?></td>
-              <td>
+              <td scope="row"><?= $linha['nomeVaga']; ?></td>
+              <td scope="row"><?= $linha['nomeSetor']; ?></td>
+              <td scope="row"><?= $linha['requisitos']; ?></td>
+              <td scope="row">
                 <a class="btn btn-warning btn-sm" href="buscar_vaga.php?id=<?php echo $linha['id']; ?>">Editar</a>
                 <a class="btn btn-danger btn-sm" href="exclui_vaga.php?id=<?php echo $linha['id']; ?>">Excluir</a>
               </td>
