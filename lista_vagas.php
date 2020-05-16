@@ -1,6 +1,5 @@
 <?php
     require_once 'conexao.php';
-
     $sql   = "select * from vagas";
     $query = $con->query($sql);
     $lista = $query->fetchAll();

@@ -16,7 +16,7 @@
   $resposta = $query->execute($vaga);
 
   if($resposta==true){
-    header('Location: lista_vagas.php');
+    header('Location: inicio.php');
   } else{
     echo "Erro ao cadastrar" . print_r($query->errorInfo());
   }
