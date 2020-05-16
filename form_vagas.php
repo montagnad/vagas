@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Formulário de cidades</title>
+    <title>Formulário de vagas de emprego</title>
   </head>
   <body>
     <div class="container">
-      <h2>Manutenção de vagas de emprego</h2>
+      <h2>Formulário de vagas de emprego</h2>
 
       <?php if(isset($registro)) $acao = "insere_vaga.php?id=".$registro['id'];
             else $acao = "insere_vaga.php"; ?>

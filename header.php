@@ -35,7 +35,10 @@
               <a class="nav-link" href="index.php" style="color: #394E70;">Início<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cadastro.php" style="color: #394E70;">Nova vaga</a>
+              <a class="nav-link" href="cadastroVaga.php" style="color: #394E70;">Nova vaga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="usuarios.php" style="color: #394E70;">Usuários</a>
             </li>
           </ul>
         </div>
