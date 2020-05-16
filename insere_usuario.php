@@ -1,22 +1,22 @@
 <?php
   require_once ('conexao.php');
 
-  $vaga = array(':vaga' => $_POST['vaga'],
-                ':setor' => $_POST['setor'],
-                  ':requisitos' => $_POST['requisitos']);
+  $user = array(':nomeUsuario' => $_POST['nomeUsuario'],
+                ':senha' => $_POST['senha'],
+                  ':permissao' => $_POST['permissao']);
 
     if(isset($_GET['id'])){ //atualização dos dados
-      $vaga['id'] = $_GET['id'];
-      $sql = "UPDATE vagas SET nomeVaga = :vaga, nomeSetor = :setor, requisitos = :requisitos WHERE id = :id";
+      $user['id'] = $_GET['id'];
+      $sql = "UPDATE usuarios SET nomeUsuario = :nomeUsuario, senha = :senha, permissao = :permissao WHERE id = :id";
     }else{
-      $sql = "INSERT INTO vagas(nomeVaga, nomeSetor, requisitos) VALUES(:vaga, :setor, :requisitos);";
+      $sql = "INSERT INTO usuarios(nomeUsuario, senha, permissao) VALUES(:nomeUsuario, :senha, :permissao);";
     }
 
   $query = $con->prepare($sql);
-  $resposta = $query->execute($vaga);
+  $resposta = $query->execute($user);
 
   if($resposta==true){
-    header('Location: index.php');
+    header('Location: usuarios.php');
   } else{
     echo "Erro ao cadastrar" . print_r($query->errorInfo());
   }
