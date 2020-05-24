@@ -2,7 +2,7 @@
   require_once ('conexao.php');
 
   $user = array(':nomeUsuario' => $_POST['nomeUsuario'],
-                ':senha' => $_POST['senha'],
+                ':senha' => md5($_POST['senha']),
                   ':permissao' => $_POST['permissao']);
 
     if(isset($_GET['id'])){ //atualização dos dados

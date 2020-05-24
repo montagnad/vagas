@@ -12,7 +12,7 @@
     $query->execute();
     if ($query->rowCount()==1) {
       $usuario = $query->fetch();
-      $_SESSION['logado'] = array("user"=>$usuario['nomeUsuario'], "id"=>$usuario['id']);
+      $_SESSION['logado'] = array("user"=>$usuario['nomeUsuario'], "id"=>$usuario['id'], "permissao"=>$usuario['permissao']);
       header('Location: index.php');
     }else {
       $msg = "Usuário ou senha incorretos.";

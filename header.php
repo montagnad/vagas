@@ -34,11 +34,16 @@
             <li class="nav-item active">
               <a class="nav-link" href="index.php" style="color: #394E70;">Início<span class="sr-only">(current)</span></a>
             </li>
+            <?php if($_SESSION['logado']['permissao'] == 'administrador') { ?>
             <li class="nav-item">
               <a class="nav-link" href="cadastroVaga.php" style="color: #394E70;">Nova vaga</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="usuarios.php" style="color: #394E70;">Usuários</a>
+            </li>
+          <?php } ?>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php" style="color: #394E70;">Sair</a>
             </li>
           </ul>
         </div>

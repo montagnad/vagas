@@ -24,7 +24,9 @@
             <th scope="col">Vaga</th>
             <th scope="col">Setor</th>
             <th scope="col">Requisitos</th>
+            <?php if($_SESSION['logado']['permissao'] == 'administrador') { ?>
             <th scope="col">Ações</th>
+          <?php } ?>
           </tr>
         </thead>
         <tbody>
@@ -33,10 +35,12 @@
               <td scope="row"><?= $linha['nomeVaga']; ?></td>
               <td scope="row"><?= $linha['nomeSetor']; ?></td>
               <td scope="row"><?= $linha['requisitos']; ?></td>
+              <?php if($_SESSION['logado']['permissao'] == 'administrador') { ?>
               <td scope="row">
                 <a class="btn btn-warning btn-sm" href="buscar_vaga.php?id=<?php echo $linha['id']; ?>">Editar</a>
                 <a class="btn btn-danger btn-sm" href="exclui_vaga.php?id=<?php echo $linha['id']; ?>">Excluir</a>
               </td>
+            <?php } ?>
             </tr>
         <?php endforeach; ?>
         </tbody>
