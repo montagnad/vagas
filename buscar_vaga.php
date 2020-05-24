@@ -8,5 +8,5 @@
     $query = $con->query($sql);
     $registro = $query->fetch();
 
-    require ('cadastro.php');
+    require ('cadastroVaga.php');
  ?>
