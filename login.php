@@ -7,7 +7,9 @@
     $sql = "SELECT * FROM usuarios WHERE nomeUsuario = :nomeUsuario AND senha = :senha";
     $query = $con->prepare($sql);
     $query->bindParam('nomeUsuario', $_POST['nomeUsuario']);
-    $senha = md5($_POST['senha']);
+    
+	if(isset($_POST['nomeUsuario']) && isset($_POST['senha'])){
+	$senha = md5($_POST['senha']);
     $query->bindParam('senha', $senha);
     $query->execute();
     if ($query->rowCount()==1) {
@@ -17,6 +19,7 @@
     }else {
       $msg = "Usuário ou senha incorretos.";
     }
+  }
   }
  ?>
 <!doctype html>
